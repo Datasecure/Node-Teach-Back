@@ -3,6 +3,7 @@
     "target": "es5",
     "module": "commonjs",
     "strict": true,
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": ["node_modules/@types"],
+    "watch": true
   }
 }
