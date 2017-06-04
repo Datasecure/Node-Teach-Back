@@ -1,3 +1,6 @@
+// If you are interested in how fs is implemented checkout https://github.com/nodejs/node/blob/master/lib/fs.js
+// You can even see how node is implemented
+
 import * as FS from 'fs'
 
 const file = 'movies.txt'
