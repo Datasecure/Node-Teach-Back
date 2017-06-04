@@ -2,14 +2,18 @@
   "name": "lesson_10-2",
   "version": "1.0.0",
   "description": "",
-  "main": "command_line_equality.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./main.ts"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^7.0.27",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.0.4",
     "typescript": "^2.3.4"
   },
   "repository": {
