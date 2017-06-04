@@ -1,0 +1,15 @@
+{
+  "name": "lesson_10-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "command_line_equality.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^7.0.27",
+    "typescript": "^2.3.4"
+  }
+}
