@@ -57,4 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
-*.js
+# JS output from tsc
+out
