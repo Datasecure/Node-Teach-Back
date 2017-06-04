@@ -11,5 +11,8 @@
   "devDependencies": {
     "@types/node": "^7.0.27",
     "typescript": "^2.3.4"
+  },
+  "repository": {
+    "type": "git"
   }
 }
