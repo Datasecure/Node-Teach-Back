@@ -30,6 +30,17 @@ export default class Bank {
     }
   }
 
+  public async lotto() {
+    const magicNumber = 23
+    const randomNumber = Math.floor(Math.random() * (100-1)) + 1
+
+    if (magicNumber === randomNumber) {
+      await this.deposit(randomNumber * 10)
+    } else {
+      await this.withdraw(randomNumber)
+    }
+  }
+
   private async getTransactions(file: string) {
     let transactions: number[] = []
 

@@ -34,6 +34,9 @@ switch (action.toUpperCase()) {
     break
   }
   case 'LOTTO' :
+    bank.lotto()
+      .then(_ => console.log('Check your total to see if you hit the jackpot!'))
+      .catch((reason) => console.error(reason))
     break
   default:
     console.warn(`Unknown action: ${action}.`)
