@@ -1,4 +1,7 @@
+import * as Numeral from 'numeral'
 import Bank from './bank'
+
+Numeral.defaultFormat('$0,0.00')
 
 const file = 'bank.txt'
 const action = process.argv[2]
@@ -8,26 +11,26 @@ const bank = new Bank(file)
 switch (action.toUpperCase()) {
   case 'TOTAL':
     bank.total()
-      .then((value) => console.log('$' + value))
+      .then((value) => console.log(`Your balance is ${Numeral(value).format()}`))
       .catch((reason) => console.error(reason))
     break;
   case 'DEPOSIT': {
-    let a = parseInt(amount)
+    let parsedAmount = parseFloat(amount)
 
-    if (a !== NaN) {
-      bank.deposit(a)
-        .then(_ => console.log(`Deposited $${a}`))
+    if (parsedAmount !== NaN) {
+      bank.deposit(parsedAmount)
+        .then(_ => console.log(`${Numeral(parsedAmount).format()} has been deposited`))
         .catch((reason) => console.error(reason))
     }
 
     break
   }
   case 'WITHDRAW': {
-    let a = parseInt(amount)
+    let parsedAmount = parseFloat(amount)
 
-    if (a !== NaN) {
-      bank.withdraw(a)
-        .then(_ => console.log(`Withdrew $${a}`))
+    if (parsedAmount !== NaN) {
+      bank.withdraw(parsedAmount)
+        .then(_ => console.log(`${Numeral(parsedAmount).format()} has been withdrawn`))
         .catch((reason) => console.error(reason))
     }
 
@@ -35,7 +38,13 @@ switch (action.toUpperCase()) {
   }
   case 'LOTTO' :
     bank.lotto()
-      .then(_ => console.log('Check your total to see if you hit the jackpot!'))
+      .then(amount => {
+        if (amount > 0) {
+          console.log(`You won ${amount}!!!`)
+        } else {
+          console.log(`You just lost ${Numeral(-1 * amount).format()}!`)
+        }
+      })
       .catch((reason) => console.error(reason))
     break
   default:
