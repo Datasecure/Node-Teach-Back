@@ -10,7 +10,9 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^7.0.27",
+    "@types/numeral": "0.0.20",
     "nodemon": "^1.11.0",
+    "numeral": "^2.0.6",
     "ts-node": "^3.0.4",
     "typescript": "^2.3.4"
   },
