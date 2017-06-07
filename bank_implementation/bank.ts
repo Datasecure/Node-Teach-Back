@@ -9,7 +9,7 @@ export default class Bank {
 
   public async total() {
     const transactions = await this.getTransactions(this.file)
-    const sum = transactions.length > 0 ? transactions.reduceRight((prev, curr) => prev + curr, 0) : 0
+    const sum = transactions.length > 0 ? transactions.reduceRight((prev, curr) => prev + curr, 0.0) : 0.0
 
     return sum
   }
