@@ -24,7 +24,7 @@ export default class Bank {
 
   public async withdraw(amount: number) {
     try {
-      await this.writeToFile(this.file, `-${amount},`)
+      await this.deposit(-1.0 * amount)
     } catch (e) {
       console.error(e)
     }
