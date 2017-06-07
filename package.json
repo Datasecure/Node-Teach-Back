@@ -13,10 +13,14 @@
     "@types/numeral": "0.0.20",
     "nodemon": "^1.11.0",
     "numeral": "^2.0.6",
+    "request": "^2.81.0",
     "ts-node": "^3.0.4",
     "typescript": "^2.3.4"
   },
   "repository": {
     "type": "git"
+  },
+  "dependencies": {
+    "@types/request": "0.0.43"
   }
 }
