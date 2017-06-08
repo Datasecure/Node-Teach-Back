@@ -23,7 +23,7 @@ Point out that `fs` is a Node module and therefore doesn’t need to be installe
 2. Create  _movies.txt_ 
 3. Walk through implementation
 
-> A callback in the context of JavaScript is a function passed as an argument into another function. This allows the calling function to execute arbitrary code so long as the function passed as an argument matches the signature required. This make code more generic and in JavaScript allows code to run   asynchronously  
+> A callback in the context of JavaScript is a function passed as an argument into another function. This allows the calling function to execute arbitrary code so long as the function passed as an argument matches the signature required. This make code more generic and in JavaScript allows code to run   asynchronously  
 
 [readFile Documentation](https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback)
 * Know that  the callback passed to `readFile`  must be a function that excepts, as arguments, two values: `err` and `data`
@@ -92,7 +92,7 @@ In JavaScript Synchronous code is executed in the order it is written. That mean
 
 This is an advanced, complex, and complicated topic in computer science. Truly understanding this topic requires you to know computer architecture and how operating systems work. Thankfully much of this complexity has been abstracted away from us by the OS, Node, and JavaScript.
 
-The thing you need to know is that asynchronous functions will allow your program to continue working when some blocking operation occurs.
+The thing you need to know is that asynchronous functions will allow your program to continue working when some blocking operation occurs.
 
 
 #UTHouston
